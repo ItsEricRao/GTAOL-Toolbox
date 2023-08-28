@@ -9,6 +9,8 @@ from PIL import Image, ImageTk
 Global Variables
 '''
 pydirectinput.PAUSE = 0
+ctypes.windll.shcore.SetProcessDpiAwareness(1)
+ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 PROCNAME = "GTA5.exe"
 
 '''
@@ -33,15 +35,15 @@ class GUI(threading.Thread):
 
     def run(self):
         self.root = Tk()
+        self.root.call('tk', 'scaling', ScaleFactor/60)
         self.root.protocol("WM_DELETE_WINDOW", self.callback)
         self.root.title("GTAOL工具箱")
-        self.root.geometry("480x420")
         img = Image.open("D:\Dev\GTAOL Toolbox\img.png")
-        img = img.resize((146,144), Image.LANCZOS)
+        img = img.resize((219,216), Image.LANCZOS)
         tk_img = ImageTk.PhotoImage(img)
-        imglbl = Label(self.root, image=tk_img)
+        imglbl = Label(self.root, image=tk_img, border=20)
         imglbl.pack()
-        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 36))
+        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 36), border=20)
         title.pack()
         text = Label(self.root, text="F4 快速零食", font=("Microsoft YaHei", 12))
         text2 = Label(self.root, text="F5 快速防弹衣", font=("Microsoft YaHei", 12))
