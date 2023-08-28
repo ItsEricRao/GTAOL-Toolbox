@@ -162,6 +162,7 @@ def mechanic():
     pydirectinput.press('space')
     time.sleep(0.1)
 
+# Quick Lester
 def lester():
     print("LOG >> KeyPressed F6 -> QuickLester")
     pydirectinput.press('up')
