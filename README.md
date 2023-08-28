@@ -17,3 +17,7 @@
     <img src="https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white" alt="EpicGames">
     <img src="https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white" alt ="nVidia">
 </div>
+
+使用Python编写的Grand Theft Auto V 在线模式工具箱
+体积小，占用小，功能简洁明了
+代码开源，完全免费，用爱发电
