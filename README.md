@@ -18,8 +18,10 @@
     <img src="https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white" alt ="nVidia">
 </div>
 
-使用Python编写的Grand Theft Auto V 在线模式工具箱
-<br />
-体积小，占用小，功能简洁明了
-<br />
-代码开源，完全免费，用爱发电
+<div align="center">
+    <h3>使用Python编写的Grand Theft Auto V 在线模式工具箱</h3>
+    <br />
+    <h3>体积小，占用小，功能简洁明了</h3>
+    <br />
+    <h3>代码开源，完全免费，用爱发电</h3>
+</div>
