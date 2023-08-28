@@ -43,7 +43,7 @@ class GUI(threading.Thread):
         tk_img = ImageTk.PhotoImage(img)
         imglbl = Label(self.root, image=tk_img, border=20)
         imglbl.pack()
-        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 36), border=20)
+        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 24), border=30)
         title.pack()
         text = Label(self.root, text="F4 快速零食", font=("Microsoft YaHei", 12))
         text2 = Label(self.root, text="F5 快速防弹衣", font=("Microsoft YaHei", 12))
