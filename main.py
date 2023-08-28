@@ -19,10 +19,6 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 PROCNAME = "GTA5.exe"
 # set program version
 VERSION = "v0.1"
-# get file's current folder
-script_location = pathlib.Path(__file__).parent
-# get image's absolute path
-img_location = str(script_location) + "\img.png"
 
 '''
 Process Killer
@@ -49,9 +45,10 @@ class GUI(threading.Thread):
         # set program zoom
         self.root.call('tk', 'scaling', ScaleFactor/60)
         self.root.protocol("WM_DELETE_WINDOW", self.callback)
-        self.root.title("GTAOL工具箱")
+        self.root.title("GTAOL工具箱 " + VERSION)
+        self.root.iconbitmap("assets/img.ico")
         # open img
-        img = Image.open(img_location)
+        img = Image.open("./assets/img.png")
         # resize img
         img = img.resize((219,216), Image.LANCZOS)
         tk_img = ImageTk.PhotoImage(img)
@@ -59,7 +56,7 @@ class GUI(threading.Thread):
         imglbl = Label(self.root, image=tk_img, border=20)
         imglbl.pack()
         # text labels
-        title = Label(self.root, text="GTAOL工具箱" + VERSION, font=("Microsoft YaHei", 24), border=30)
+        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 24), border=30)
         title.pack()
         text = Label(self.root, text="F3 快速零食", font=("Microsoft YaHei", 12))
         text2 = Label(self.root, text="F4 快速防弹衣", font=("Microsoft YaHei", 12))
