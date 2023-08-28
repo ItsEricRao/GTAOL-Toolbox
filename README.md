@@ -4,9 +4,9 @@
 <h1 align="center">GTAOL Toolbox</h1>
 
 <div align="center">
-    <img src="https://ghproxy.com/https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/made-with-python.svg" alt="python" />
-    <img src="https://ghproxy.com/https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/built-with-love.svg" alt="BuiltWithLove" />
-    <img src="https://ghproxy.com/https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/powered-by-electricity.svg" alt="PoweredByElectricity" />
+    <img src="https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/made-with-python.svg" alt="python" />
+    <img src="https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/built-with-love.svg" alt="BuiltWithLove" />
+    <img src="https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/powered-by-electricity.svg" alt="PoweredByElectricity" />
 </div>
 
 <br />
