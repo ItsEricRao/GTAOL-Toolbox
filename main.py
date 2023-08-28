@@ -17,6 +17,8 @@ ctypes.windll.shcore.SetProcessDpiAwareness(1)
 ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 # set GTAV process name.
 PROCNAME = "GTA5.exe"
+# set program version
+VERSION = "v0.1"
 # get file's current folder
 script_location = pathlib.Path(__file__).parent
 # get image's absolute path
@@ -57,7 +59,7 @@ class GUI(threading.Thread):
         imglbl = Label(self.root, image=tk_img, border=20)
         imglbl.pack()
         # text labels
-        title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 24), border=30)
+        title = Label(self.root, text="GTAOL工具箱" + VERSION, font=("Microsoft YaHei", 24), border=30)
         title.pack()
         text = Label(self.root, text="F3 快速零食", font=("Microsoft YaHei", 12))
         text2 = Label(self.root, text="F4 快速防弹衣", font=("Microsoft YaHei", 12))
