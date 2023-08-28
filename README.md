@@ -6,5 +6,6 @@
 ![Python](https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/made-with-python.svg)
 ![BuiltWithLove](https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/built-with-love.svg)
 ![PoweredByElectricity](https://raw.githubusercontent.com/BraveUX/for-the-badge/55b5a234c0fab935df5fb08365bc8fe9c37cf46b/src/images/badges/powered-by-electricity.svg)
+<br />
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
