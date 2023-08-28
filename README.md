@@ -21,6 +21,6 @@
 <div align="center">
     <h3>使用Python编写的Grand Theft Auto V 在线模式工具箱</h3>
     <br />
-    <p>📦体积小   🎚️占用小   ✨功能多</p>
+    <p>📦体积小 &nbsp;&nbsp;🎚️占用小 &nbsp;&nbsp;✨功能多</p>
     <p>📖代码开源 🆓完全免费 ❤️用爱发电</p>
 </div>
