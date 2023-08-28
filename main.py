@@ -1,17 +1,26 @@
 '''
 Import Modules
 '''
-import pydirectinput, time, keyboard, ctypes, os, threading, psutil
+import pydirectinput, time, keyboard, ctypes, os, threading, psutil, pathlib
 SendInput = ctypes.windll.user32.SendInput
 from tkinter import *
 from PIL import Image, ImageTk
+
 '''
 Global Variables
 '''
+# set pydirectinput module time interval between presses
 pydirectinput.PAUSE = 0
+# adaptive dpi
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
+# get factor of the device
 ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
+# set GTAV process name.
 PROCNAME = "GTA5.exe"
+# get file's current folder
+script_location = pathlib.Path(__file__).parent
+# get image's absolute path
+img_location = str(script_location) + "\img.png"
 
 '''
 Process Killer
@@ -24,7 +33,6 @@ def kill():
 '''
 Tkinter GUI
 '''
-
 class GUI(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -35,14 +43,19 @@ class GUI(threading.Thread):
 
     def run(self):
         self.root = Tk()
+        # set program zoom
         self.root.call('tk', 'scaling', ScaleFactor/60)
         self.root.protocol("WM_DELETE_WINDOW", self.callback)
         self.root.title("GTAOL工具箱")
-        img = Image.open("D:\Dev\GTAOL Toolbox\img.png")
+        # open img
+        img = Image.open(img_location)
+        # resize img
         img = img.resize((219,216), Image.LANCZOS)
         tk_img = ImageTk.PhotoImage(img)
+        # img label
         imglbl = Label(self.root, image=tk_img, border=20)
         imglbl.pack()
+        # text labels
         title = Label(self.root, text="GTAOL工具箱", font=("Microsoft YaHei", 24), border=30)
         title.pack()
         text = Label(self.root, text="F4 快速零食", font=("Microsoft YaHei", 12))
@@ -66,18 +79,20 @@ Network
 '''
 def block():
     print("LOG >> KeyPressed F11 -> Block Internet")
+    # use terminal to block port 6672. (UAC acquired)
     os.system('netsh advfirewall firewall add rule name="GTAOL" protocol=UDP  dir=out localport=6672 action=block')
     time.sleep(0.1)
 
 def unblock():
     print("LOG >> KeyPressed F22 -> Unblock Internet")
+    # use terminal to remove firewall rules called "GTAOL". (UAC acquired)
     os.system('netsh advfirewall firewall delete rule name="GTAOL"')
     time.sleep(0.1)
 
 '''
 Macro
 '''
-
+# Quick Snack
 def snack():
     print("LOG >> KeyPressed F4 -> QuickSnack")
     pydirectinput.press('m')
@@ -98,6 +113,7 @@ def armor():
     pydirectinput.press('up', presses=3)
     time.sleep(0.1)
 
+# Quick Mechanic
 def mechanic():
     pydirectinput.press('up')
     time.sleep(0.5)
